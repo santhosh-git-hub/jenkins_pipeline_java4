@@ -7,7 +7,6 @@ def HTTP_PORT="8090"
 node {
     tools { 
       maven 'MAVEN_HOME' 
-      jdk 'JAVA_HOME' 
     }
     //stage('Initialize'){
     //    def dockerHome = tool 'myDocker'
