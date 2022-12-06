@@ -1,7 +1,7 @@
 def CONTAINER_NAME="jenkins-pipeline"
 def CONTAINER_TAG="latest"
 //def DOCKER_HUB_USER="hakdogan"
-def DOCKER_HUB_USER="basireddym"
+def DOCKER_HUB_USER="santhoshdoc"
 def HTTP_PORT="8090"
 
 node {
@@ -56,7 +56,7 @@ def imagePrune(containerName){
 }
 
 def imageBuild(containerName, tag){
-    sh "docker build --ulimit nofile= 65536 : 65536-t $containerName:$tag  -t $containerName --pull --no-cache ."
+    sh "docker build --ulimit nofile=65536:65536 -t $containerName:$tag  -t $containerName --pull --no-cache ."
     echo "Image build complete"
 }
 
